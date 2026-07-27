@@ -1,0 +1,40 @@
+from app.services.ml_service import predict
+
+sample = {
+    "dur":0.12147799879312515,
+    "proto":"tcp",
+    "service":"-",
+    "state":"FIN",
+    "spkts":6,
+    "dpkts":4,
+    "sbytes":258,
+    "dbytes":172,
+    "rate":74.08,
+    "sload":14158.94,
+    "dload":8495.36,
+    "sloss":0,
+    "dloss":0,
+    "sinpkt":24.29,
+    "dinpkt":8.37,
+    "sjit":30.17,
+    "djit":11.83,
+    "swin":255,
+    "stcpb":621772692,
+    "dtcpb":2202533631,
+    "dwin":255,
+    "tcprtt":0.0,
+    "synack":0.0,
+    "ackdat":0.0,
+    "smean":43,
+    "dmean":43,
+    "trans_depth":0,
+    "response_body_len":0,
+    "ct_src_dport_ltm":1,
+    "ct_dst_sport_ltm":1,
+    "is_ftp_login":0,
+    "ct_ftp_cmd":0,
+    "ct_flw_http_mthd":0,
+    "is_sm_ips_ports":0
+}
+
+print(predict(sample))
